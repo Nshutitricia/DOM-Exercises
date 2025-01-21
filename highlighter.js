@@ -22,12 +22,30 @@ for(i = 0 ; i<para.length;i++){
 }
 */
 let clas = document.querySelector('#myParagraph')
-let para = clas.textContent.split(' ')
-let unique =[...new Set(para)]
-const repea = (arrUnique, arrPara) => arrUnique.reduce((ob, valUnique) =>{
-    ob[valUnique] = arrPara.filter(v => valUnique ===v).length;
-    return ob;
-},{});
-const result = repea(unique,para);
-const sorted = Object.entries(result).sort((a,b) => b[1]-a[1])
-console.log(sorted)
+function wordHigh(){
+    let para = clas.textContent.split(' ')
+    let unique =[...new Set(para)]
+    const repea = (arrUnique, arrPara) => arrUnique.reduce((ob, valUnique) =>{
+        ob[valUnique] = arrPara.filter(v => valUnique ===v).length;
+        return ob;
+    },{});
+    const result = repea(unique,para);
+    
+    console.log(result)
+}
+wordHigh();
+
+
+/*const paragraph = document.getElementById('name');
+function highlighted(){
+    
+const words = paragraph.textContent.split(' ');  
+const update = words.map(word =>  word.length > 8 ? `<span class="highlight" style = "background-color: yellow;">${word}</span>` : word
+).join(' ');  
+console.log(update)
+return paragraph.innerHTML = update;  
+
+}
+
+highlighted();
+*/

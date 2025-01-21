@@ -1,0 +1,29 @@
+*{
+    background-color: rgb(176, 150, 150);  
+  }
+  
+  
+  #todoList{
+      list-style-type: none;
+  }
+  
+  body{
+      position: absolute;
+      top:50%;
+      margin-left: 35%;
+  }
+  #tolist{
+      font-size: 30px;
+      font-weight: bolder;
+  }
+  #todo{
+      border-radius: 10px;
+      border-style: double;
+      border-width: 7px;
+      border-color: brown;
+  }
+  #add{
+      border-style: double;
+      border-radius: 10px;
+      border-width: 7px;
+  }
